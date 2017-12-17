@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    tools:context="cn.ahabox.activity.RecipientAddressActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include layout="@layout/mycustomactionbar"
+            android:id="@+id/addredss_header"/>
+
+        <include layout="@layout/horizontalline"/>
+
+        <cn.ahabox.widget.indicator.TitleIndicator
+            android:id="@+id/pagerindicator"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@color/white"
+            app:footerColor="@color/text_red"
+            app:footerLineHeight="0dp"
+            app:footerTriangleHeight="3dp"
+            app:textColor="@drawable/tab_indicator_text"
+            app:textSizeNormal="@dimen/common_text_size_middle_2"
+            app:textSizeSelected="@dimen/common_text_size_middle_2" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/text_red"/>
+
+        <cn.ahabox.widget.indicator.ViewPagerCompat
+            android:id="@+id/pager"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:duplicateParentState="true" />
+
+        <View
+            android:id="@+id/view_address_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_address_confirm"
+        style="@style/btn_nextstyle"
+        android:text="@string/dialog_ok"
+        android:visibility="gone"/>
+
+</RelativeLayout>

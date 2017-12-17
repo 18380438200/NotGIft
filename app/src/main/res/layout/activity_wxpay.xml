@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="cn.ahabox.activity.WXpayActivity">
+
+    <include layout="@layout/mycustomactionbar"
+        android:id="@+id/wxpay_header"/>
+
+    <View
+        android:id="@+id/view_wxpay_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/line_color"
+        android:layout_below="@id/wxpay_header"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/view_wxpay_line">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include layout="@layout/product_info"/>
+
+            <include layout="@layout/content_seperater"/>
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20dp">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical">
+                    <TextView
+                        style="@style/text_basestyle"
+                        android:text="@string/tipinfo"
+                        android:textSize="13sp"/>
+
+                    <EditText
+                        android:id="@+id/et_wxpay_remark"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="70dp"
+                        android:layout_marginLeft="20dp"
+                        android:textSize="11sp"
+                        android:background="@drawable/edittext_bg_shape"
+                        android:hint="@string/tipexplain"
+                        android:padding="10dp"
+                        android:lineSpacingExtra="5dp"
+                        android:gravity="top"/>
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/tr_wxpay_promocode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:gravity="center_vertical">
+                    <TextView
+                        style="@style/text_basestyle"
+                        android:text="@string/promocode"
+                        android:textSize="13sp"/>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_wxpay_promocode"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp">
+                        <EditText
+                            android:id="@+id/et_wxpay_promo"
+                            android:layout_width="235dp"
+                            android:layout_height="40dp"
+                            android:background="@drawable/edittext_bg_shape"
+                            android:textSize="11sp"
+                            android:padding="8dp"
+                            android:paddingLeft="10dp"
+                            android:hint="@string/inputpromocede"/>
+                        <TextView
+                            android:id="@+id/tv_wxpay_check"
+                            android:layout_width="60dp"
+                            android:layout_height="28dp"
+                            android:text="@string/verification"
+                            android:background="@drawable/pressed_red_selector"
+                            android:textColor="@color/white"
+                            android:layout_alignRight="@id/et_wxpay_promo"
+                            android:layout_centerVertical="true"
+                            android:gravity="center"
+                            android:layout_marginRight="5dp"/>
+
+                    </RelativeLayout>
+
+                </TableRow>
+
+            </TableLayout>
+
+            <include layout="@layout/content_seperater"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="24dp"
+                android:gravity="center_horizontal">
+
+                <TextView
+                    style="@style/text_basestyle"
+                    android:text="@string/siyn_money"
+                    android:textSize="18sp"/>
+
+                <TextView
+                    android:id="@+id/tv_wxpay_price"
+                    style="@style/text_basestyle"
+                    android:text="138"
+                    android:textSize="18sp"
+                    android:layout_marginLeft="3dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="X"
+                    android:padding="4dp"/>
+
+                <TextView
+                    android:id="@+id/tv_wxpay_num"
+                    style="@style/text_basestyle"
+                    android:text="2"
+                    android:textSize="18sp"
+                    android:layout_marginRight="20dp"/>
+
+                <include layout="@layout/seperateline" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_red"
+                    android:text="@string/shifu"
+                    android:textSize="18sp"
+                    android:layout_marginLeft="20dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_red"
+                    android:text="@string/siyn_money"
+                    android:textSize="18sp"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp"/>
+
+                <TextView
+                    android:id="@+id/tv_wxpay_totalamount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_red"
+                    android:textSize="18sp"
+                    android:text="276"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_wxpay_buy_tip"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <include layout="@layout/content_seperater"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="20dp"
+                    android:paddingLeft="13dp"
+                    android:paddingRight="13dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/wenxintip"
+                        android:textSize="11sp"
+                        android:textColor="@color/text_red"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:lineSpacingExtra="5dp"
+                        android:textSize="11sp"
+                        android:text="@string/wenxinexplain"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="20dp"
+                    android:paddingLeft="13dp"
+                    android:paddingRight="13dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/ship"
+                        android:textSize="11sp"
+                        android:textColor="@color/text_red"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:lineSpacingExtra="5dp"
+                        android:textSize="11sp"
+                        android:text="@string/shipexplain"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="40dp"/>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/ll_wxpay_gotopay"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/pressed_red_selector"
+        android:layout_alignParentBottom="true"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="@string/payment"
+            android:textSize="18sp"
+            android:layout_marginLeft="20dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="@string/siyn_money"
+            android:textSize="16sp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="3dp"/>
+
+        <TextView
+            android:id="@+id/tv_wxpay_gopay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:text="276"/>
+    </LinearLayout>
+
+</RelativeLayout>

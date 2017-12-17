@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="cn.ahabox.activity.ProductDetailActivity">
+
+    <include layout="@layout/mycustomactionbar"
+        android:id="@+id/product_detail_header"/>
+
+    <View
+        android:id="@+id/horizontal_line"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/line_color"
+        android:layout_below="@id/product_detail_header"/>
+
+    <cn.ahabox.widget.myslidingmenu.SlidingMenu
+        android:id="@+id/expanded_menu"
+        android:scrollbars="none"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/horizontal_line">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <cn.ahabox.widget.myslidingmenu.YsnowScrollViewPageOne
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/ripple_material_dark"
+                android:scrollbars="vertical">
+
+                <include layout="@layout/productdetail_top"/>
+            </cn.ahabox.widget.myslidingmenu.YsnowScrollViewPageOne>
+
+            <LinearLayout
+                android:id="@+id/ll"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <include layout="@layout/productdetail_bottom"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </cn.ahabox.widget.myslidingmenu.SlidingMenu>
+
+    <include layout="@layout/mycustombuystatus"
+        android:id="@+id/product_detail_buy" />
+
+</RelativeLayout>

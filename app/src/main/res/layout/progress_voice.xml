@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:android_custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="40dp"
+    android:layout_height="40dp">
+
+    <RelativeLayout
+        android:id="@+id/rl_detail_player"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@mipmap/detail_voice_nomal"/>
+
+        <com.ant.liao.GifView
+            android:id="@+id/mygif"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerInParent="true"
+            android:enabled="false"
+            android:visibility="gone"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/detail_voice_bg"/>
+
+        <cn.ahabox.widget.RoundProgressBar
+            android:id="@+id/roundprogressbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android_custom:roundColor="#C6E2FF"
+            android_custom:roundWidth="3dp"
+            android_custom:roundProgressColor="@color/text_red"
+            android_custom:textIsDisplayable="false"/>
+
+        <View
+            android:id="@+id/view_play_finish"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/detail_voice_widebg"
+            android:visibility="gone"/>
+    </RelativeLayout>
+
+</RelativeLayout>

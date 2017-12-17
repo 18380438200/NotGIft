@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="cn.ahabox.activity.AddAddressActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include layout="@layout/mycustomactionbar"
+            android:id="@+id/addaddress_header"/>
+
+        <include layout="@layout/horizontalline"/>
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="13dp"
+            android:layout_marginRight="13dp">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    style="@style/addaddress_title"
+                    android:text="@string/reciepent_name"/>
+
+                <EditText
+                    android:id="@+id/et_addadd_name"
+                    style="@style/addaddress_et_style"
+                    android:layout_weight="11"
+                    android:hint="请输入收礼人姓名"
+                    android:textColor="@color/black"
+                    android:background="@drawable/add_address_etshape"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp">
+                <TextView
+                    style="@style/addaddress_title"
+                    android:text="@string/reciepent_phone"/>
+
+                <EditText
+                    android:id="@+id/et_addadd_phone"
+                    style="@style/addaddress_et_style"
+                    android:layout_weight="11"
+                    android:hint="请输入收礼人手机号"
+                    android:inputType="phone"
+                    android:maxLength="11"
+                    android:textColor="@color/black"
+                    android:background="@drawable/add_address_etshape"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp">
+
+                <TextView
+                    style="@style/addaddress_title"
+                    android:text="@string/reciepent_province"/>
+
+                <EditText
+                    android:id="@+id/et_addadd_province"
+                    android:layout_width="0dp"
+                    android:layout_weight="9"
+                    android:layout_height="match_parent"
+                    android:paddingLeft="13dp"
+                    android:textSize="13sp"
+                    android:hint="请先选择省份"
+                    android:editable="false"
+                    android:textColor="@color/black"
+                    android:background="@drawable/loginbtn_mine_shape"/>
+
+                <RelativeLayout
+                    android:id="@+id/rl_addadd_province"
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/add_address_rightshape">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@mipmap/ic_black_enter"/>
+                </RelativeLayout>
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tr_add_city"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:visibility="gone">
+                <TextView
+                    style="@style/addaddress_title"
+                    android:text="@string/reciepent_mayer"/>
+
+                <EditText
+                    android:id="@+id/et_addadd_mayer"
+                    android:layout_width="0dp"
+                    android:layout_weight="11"
+                    android:layout_height="match_parent"
+                    android:textSize="13sp"
+                    android:hint="请选择市"
+                    android:editable="false"
+                    android:paddingLeft="13dp"
+                    android:textColor="@color/black"
+                    android:background="@drawable/loginbtn_mine_shape"/>
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tr_add_county"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:visibility="gone">
+                <TextView
+                    style="@style/addaddress_title"
+                    android:text="@string/reciepent_county"/>
+
+                <EditText
+                    android:id="@+id/et_addadd_county"
+                    android:layout_width="0dp"
+                    android:layout_weight="11"
+                    android:layout_height="match_parent"
+                    android:paddingLeft="13dp"
+                    android:textSize="13sp"
+                    android:hint="请选择区/县"
+                    android:editable="false"
+                    android:textColor="@color/black"
+                    android:background="@drawable/loginbtn_mine_shape"/>
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tr_add_zipcode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:visibility="gone">
+                <TextView
+                    style="@style/addaddress_title"
+                    android:text="@string/reciepent_zipcode"/>
+
+                <EditText
+                    android:id="@+id/et_addadd_zipcode"
+                    style="@style/addaddress_et_style"
+                    android:layout_weight="11"
+                    android:textColor="@color/black"
+                    android:background="@drawable/add_address_etshape"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp">
+                <TextView
+                    style="@style/addaddress_title"
+                    android:text="@string/reciepent_address"/>
+
+                <EditText
+                    android:id="@+id/et_addadd_address"
+                    style="@style/addaddress_et_style"
+                    android:layout_weight="11"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:hint="请输入收礼人详细地址"
+                    android:textColor="@color/black"
+                    android:background="@drawable/add_address_etshape"/>
+            </TableRow>
+
+        </TableLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_addadd_confirm"
+        style="@style/btn_nextstyle"
+        android:text="@string/dialog_ok"/>
+</RelativeLayout>

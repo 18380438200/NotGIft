@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tv_record_title"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:textColor="@color/text_color"
+        android:gravity="center_vertical"
+        android:paddingLeft="12dp"
+        android:textSize="12sp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="12dp"
+        android:background="@color/listview_bg"/>
+
+</LinearLayout>

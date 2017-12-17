@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:background="#fff"
+        android:id="@+id/invis">
+
+        <RadioGroup
+            android:id="@+id/rg_menubar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rb_designer"
+                style="@style/product_detail_radiobtn"
+                android:text="@string/designer_on"/>
+
+            <RadioButton
+                android:id="@+id/rb_artist"
+                style="@style/product_detail_radiobtn"
+                android:text="@string/designer_off" />
+        </RadioGroup>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="0dp"/>
+
+            <include layout="@layout/seperateline" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="0dp"/>
+        </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_stick_bottomline"
+        android:layout_below="@id/rg_menubar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <View
+            style="@style/detail_bottomline"/>
+        <View
+            style="@style/detail_bottomline"/>
+    </LinearLayout>
+
+    </RelativeLayout>

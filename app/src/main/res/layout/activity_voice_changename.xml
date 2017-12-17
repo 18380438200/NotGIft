@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="cn.ahabox.activity.VoiceChangenameActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include layout="@layout/mycustomactionbar"
+            android:id="@+id/voicechangename_header"/>
+
+        <include layout="@layout/horizontalline"/>
+
+        <EditText
+            android:id="@+id/et_changename_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/voice_changename_tip"
+            android:background="@drawable/edittext_bg_shape"
+            android:maxLength="30"
+            android:textSize="12sp"
+            android:singleLine="true"
+            android:inputType="text"
+            android:padding="12dp"
+            android:layout_margin="8dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <TextView
+            android:id="@+id/tv_changename_cancel"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="wrap_content"
+            android:text="取 消"
+            android:background="@drawable/pressed_black_selector"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:padding="10dp"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:id="@+id/tv_changename_confirm"
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:layout_height="wrap_content"
+            android:text="确 定"
+            android:background="@drawable/pressed_red_selector"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:padding="10dp"
+            android:textSize="16sp"/>
+    </LinearLayout>
+
+</RelativeLayout>

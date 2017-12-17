@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/iv_firstpage_toast"
+        android:layout_width="300dp"
+        android:layout_height="480dp"
+        android:layout_gravity="center"/>
+
+    <ImageButton
+        android:id="@+id/ib_firstpage_close"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:background="@mipmap/ic_close"
+        android:layout_gravity="center_horizontal"/>
+
+</LinearLayout>

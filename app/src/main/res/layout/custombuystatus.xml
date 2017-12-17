@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="42dp"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:id="@+id/ll_productdetail_kefu"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="match_parent"
+        android:background="@drawable/pressed_black_selector"
+        android:gravity="center"
+        android:clickable="true"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="14dp"
+            android:layout_height="14dp"
+            android:background="@mipmap/menu_bottom_service"
+            android:layout_marginTop="2dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:layout_marginTop="2dp"
+            android:textSize="11sp"
+            android:text="@string/productdetail_kefu"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_productdetail_coll"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="match_parent"
+        android:background="@drawable/pressed_black_selector"
+        android:layout_marginLeft="0.5dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageButton
+            android:id="@+id/iv_productdetail_love"
+            android:layout_width="15dp"
+            android:layout_height="13dp"
+            android:background="@mipmap/menu_bottom_love_normal"
+            android:layout_marginTop="2dp"/>
+
+        <TextView
+            android:id="@+id/tv_productdetail_shopcart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:layout_marginTop="2dp"
+            android:textSize="11sp"
+            android:text="@string/shopcart"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_productdetail_common"
+        android:layout_width="0dp"
+        android:layout_weight="4"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tv_addto_shopcart"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:background="@drawable/pressed_black_selector"
+            android:layout_marginLeft="0.5dp"
+            android:textSize="14sp"
+            android:text="@string/addto_shopcart"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:layout_height="match_parent" />
+
+        <!--<Button-->
+            <!--android:id="@+id/btn_detail_myself"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_weight="2"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_marginLeft="0.5dp"-->
+            <!--android:text="@string/productdetail_sendself"-->
+            <!--android:textSize="14sp"-->
+            <!--android:textColor="@color/white"-->
+            <!--android:background="@drawable/pressed_red_selector"/>-->
+
+        <!--<Button-->
+            <!--android:id="@+id/btn_detail_other"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_weight="2"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_marginLeft="0.5dp"-->
+            <!--android:text="@string/productdetail_sendta"-->
+            <!--android:textSize="14sp"-->
+            <!--android:textColor="@color/white"-->
+            <!--android:background="@drawable/pressed_red_selector"/>-->
+
+        <Button
+            android:id="@+id/btn_detail_buy"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="0.5dp"
+            android:text="@string/buy_rightnow"
+            android:textSize="14sp"
+            android:textColor="@color/white"
+            android:background="@drawable/pressed_red_selector"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_detail_donations"
+        android:layout_width="0dp"
+        android:layout_weight="4"
+        android:layout_height="match_parent"
+        android:text="@string/donations"
+        android:layout_marginLeft="0.5dp"
+        android:textSize="14sp"
+        android:textColor="@color/white"
+        android:background="@drawable/pressed_red_selector"
+        android:visibility="gone"/>
+
+    <Button
+        android:id="@+id/btn_detail_contact"
+        android:layout_width="0dp"
+        android:layout_weight="4"
+        android:layout_height="match_parent"
+        android:text="@string/productdetail_contactbutler"
+        android:layout_marginLeft="0.5dp"
+        android:textSize="14sp"
+        android:textColor="@color/white"
+        android:background="@drawable/pressed_red_selector"
+        android:visibility="gone"/>
+
+</LinearLayout>

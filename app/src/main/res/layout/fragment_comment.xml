@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <include layout="@layout/horizontalline"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:text="@string/comment"
+        android:textColor="@color/text_red"
+        android:gravity="center"
+        android:textSize="17sp"/>
+
+    <include layout="@layout/horizontalline"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:layout_margin="16dp">
+
+        <EditText
+            android:id="@+id/et_designerdetail_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="@string/saysomething"
+            android:gravity="top|left"
+            android:background="@drawable/comment_shape"
+            android:padding="10dp"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/tv_designerdetail_comment"
+            android:layout_width="58dp"
+            android:layout_height="24dp"
+            android:text="@string/comment"
+            android:background="@drawable/edittext_blackbg_shape"
+            android:layout_alignParentRight="true"
+            android:textSize="14sp"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:layout_marginRight="9dp"
+            android:layout_marginBottom="7dp"
+            android:layout_alignParentBottom="true"/>
+
+    </RelativeLayout>
+
+    <cn.ahabox.widget.ListViewForScrollView
+        android:id="@+id/ls_designerdetail_comments"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/tv_designerdetail_more"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="@string/more_comments"
+        android:textColor="@color/text_red"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:layout_margin="20dp"
+        android:background="@drawable/more_comments_shape"/>
+
+</LinearLayout>

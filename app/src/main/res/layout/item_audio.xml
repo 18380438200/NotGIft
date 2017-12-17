@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="12dp"
+    android:background="@drawable/edittext_bg_shape">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/audio_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:maxLength="12"
+            android:ellipsize="end"
+            android:textColor="@color/voicelist_textcolor"/>
+
+        <TextView
+            android:id="@+id/tv_audio_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/voicelist_textcolor"
+            android:layout_alignParentRight="true"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/tv_audio_play"
+        android:layout_width="170dp"
+        android:layout_height="32dp"
+        android:layout_marginLeft="10dp"
+        android:paddingLeft="10dp"
+        android:layout_marginBottom="9dp"
+        android:layout_below="@id/audio_name"
+        android:background="@drawable/edittext_redbg_shape">
+
+        <ImageView
+            android:id="@+id/iv_audio"
+            android:layout_width="10dp"
+            android:layout_height="14dp"
+            android:layout_centerVertical="true"
+            android:background="@mipmap/recordvoice"/>
+
+        <com.ant.liao.GifView
+            android:id="@+id/mygif"
+            android:layout_width="10dp"
+            android:layout_height="14dp"
+            android:layout_centerVertical="true"
+            android:enabled="false"
+            android:visibility="gone"/>
+    </RelativeLayout>
+
+    <include layout="@layout/horizontalline"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true">
+
+        <TextView
+            android:id="@+id/audio_del"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_height="match_parent"
+            android:textColor="@color/voicelist_textcolor"
+            android:text="@string/audio_del"/>
+
+        <include layout="@layout/seperateline"/>
+
+        <TextView
+            android:id="@+id/audio_changename"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textColor="@color/voicelist_textcolor"
+            android:layout_height="match_parent"
+            android:text="@string/audio_changename"/>
+    </LinearLayout>
+
+</LinearLayout>

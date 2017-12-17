@@ -1,0 +1,5 @@
+classes
+res\
+dexedLibs
+aidl
+AndroidManifest.xml.d

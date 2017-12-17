@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context="cn.ahabox.fragment.AboutUsFragment">
+
+    <include layout="@layout/mycustom_mainbar"
+        android:id="@+id/about_header"/>
+
+    <include layout="@layout/horizontalline"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_aboutus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/about_us"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_below="@id/iv_aboutus"
+            android:padding="25dp">
+
+            <TextView
+                style="@style/text_basestyle"
+                android:textSize="15sp"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="10dp"
+                android:text="@string/title_aboutus"/>
+
+            <include layout="@layout/horizontalline"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="13dp"
+                android:lineSpacingExtra="5dp"
+                android:textSize="12sp"
+                android:text="@string/aboutus_slogon"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="70dp"
+        android:layout_height="22dp"
+        android:layout_marginTop="10dp"
+        android:background="@mipmap/ic_menu_slogan"
+        android:layout_gravity="center_horizontal" />
+
+</LinearLayout>

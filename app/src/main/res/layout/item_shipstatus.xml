@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_shipstatus_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/ll_shipstatus_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <View
+            android:id="@+id/view_shipstatus_up"
+            android:layout_width="0.5dp"
+            android:layout_height="16dp"
+            android:background="@color/mine_loginbtn_line"/>
+
+        <ImageView
+            android:id="@+id/iv_shipstatus_icon"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:background="@mipmap/orderinformation_no"/>
+
+        <View
+            android:id="@+id/view_shipstatus_down"
+            android:layout_width="0.5dp"
+            android:layout_height="16dp"
+            android:background="@color/mine_loginbtn_line"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_shipstatus_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="下单"
+        android:layout_marginLeft="16dp"
+        android:layout_centerVertical="true"
+        android:textColor="@color/grey_text_color"
+        android:layout_toRightOf="@id/ll_shipstatus_icon"/>
+
+    <TextView
+        android:id="@+id/tv_shipstatus_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2016-7-22 15:13"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="16dp"
+        android:textSize="12sp"
+        android:textColor="@color/addaddress_ettextcolor"/>
+
+</RelativeLayout>

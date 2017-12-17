@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <include layout="@layout/horizontalline"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioGroup
+            android:id="@+id/rg_detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rb_script"
+                style="@style/product_detail_radiobtn"
+                android:text="@string/tab_pictext" />
+
+            <RadioButton
+                android:id="@+id/rb_detail"
+                style="@style/product_detail_radiobtn"
+                android:text="@string/tab_giftdescript"
+                android:checked="false" />
+
+            <RadioButton
+                android:id="@+id/rb_comment"
+                style="@style/product_detail_radiobtn"
+                android:text="@string/tab_giftcomment" />
+
+            <RadioButton
+                android:id="@+id/rb_service"
+                style="@style/product_detail_radiobtn"
+                android:text="@string/tab_specialservice" />
+        </RadioGroup>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="0dp"/>
+
+            <include layout="@layout/seperateline" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="0dp"/>
+
+            <include layout="@layout/seperateline"/>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="0dp"/>
+
+            <include layout="@layout/seperateline" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="0dp"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_detail_bottomline"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <View
+            style="@style/detail_bottomline"/>
+        <View
+            style="@style/detail_bottomline"/>
+        <View
+            style="@style/detail_bottomline"/>
+        <View
+            style="@style/detail_bottomline"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/text_red"/>
+
+        <FrameLayout
+            android:id="@+id/fl_picdetail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+</LinearLayout>

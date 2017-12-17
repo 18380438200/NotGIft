@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:android_custom="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_view"
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:clickable="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stateListAnimator="@anim/cardview_touchraise"
+        card_view:cardBackgroundColor="@android:color/white"
+        android:layout_margin="12dp"
+        card_view:cardCornerRadius="8dp"
+        card_view:cardElevation="4dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+
+            <ImageView
+                android:id="@+id/iv_designer_pic"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:scaleType="centerCrop"
+                android:layout_marginTop="15dp"/>
+
+            <cn.ahabox.widget.VoicePlayer
+                android:id="@+id/rl_player"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:layout_marginTop="-21dp"/>
+
+            <TextView
+                    android:id="@+id/tv_designer_name"
+                    style="@style/text_basestyle"
+                    android:textSize="16sp"
+                    android:layout_marginTop="10dp"/>
+
+                <View
+                    android:layout_width="80dp"
+                    android:layout_height="0.5dp"
+                    android:background="@color/line_color"
+                    android:layout_margin="14dp"/>
+
+                <TextView
+                    android:id="@+id/tv_designer_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="11dp"
+                    android:paddingRight="11dp"
+                    android:maxLines="2"
+                    android:textSize="12sp"
+                    android:lineSpacingExtra="3dp"
+                    android:ellipsize="end" />
+
+                <cn.ahabox.widget.GridViewForScrollView
+                    android:id="@+id/gv_designerlist_product"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:numColumns="3"
+                    android:paddingLeft="11dp"
+                    android:paddingRight="11dp"
+                    android:horizontalSpacing="5dp"
+                    android:verticalSpacing="5dp"
+                    android:layout_marginTop="18dp"/>
+
+                <TextView
+                    android:id="@+id/tv_designer_more"
+                    android:layout_width="85dp"
+                    android:layout_height="30dp"
+                    android:layout_margin="16dp"
+                    android:text="@string/see_more"
+                    android:textSize="13sp"
+                    android:textColor="@color/white"
+                    android:background="@drawable/pressed_red_selector"
+                    android:gravity="center"/>
+
+            </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>

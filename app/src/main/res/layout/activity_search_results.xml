@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="cn.ahabox.activity.SearchResultsActivity">
+
+    <include layout="@layout/mycustomactionbar"
+        android:id="@+id/search_header"/>
+
+    <include layout="@layout/horizontalline"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.handmark.pulltorefresh.library.PullToRefreshGridView
+                android:id="@+id/gv_product"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:listSelector="@color/transparent"
+                android:padding="5dp"
+                android:numColumns="2"/>
+
+            <RelativeLayout
+                android:id="@+id/rl_search_noproducts"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="60dp"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/iv_search_search"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:background="@mipmap/ic_menu_search"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="哎呀，没找到商品"
+                    android:textColor="@color/text_color"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center"
+                    android:textSize="16sp"
+                    android:layout_marginTop="20dp"
+                    android:layout_below="@id/iv_search_search"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_search_recordbox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white">
+
+                <RelativeLayout
+                    android:id="@+id/rl_search_record"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tv_search_record"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:text="@string/search_record"
+                        android:padding="12dp"/>
+
+                    <TextView
+                        android:id="@+id/tv_search_del"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="@string/clear_record"
+                        android:textSize="12sp"
+                        android:padding="12dp"/>
+
+                    <View
+                        android:id="@+id/view_search_seperator"
+                        android:layout_below="@id/tv_search_record"
+                        android:layout_width="match_parent"
+                        android:background="@color/line_color"
+                        android:layout_height="1px"/>
+
+                    <ListView
+                        android:id="@+id/lv_search_record"
+                        android:layout_below="@id/view_search_seperator"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:divider="@null"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@color/line_color"
+                        android:layout_below="@id/lv_search_record"/>
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/rl_search_hot"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_below="@id/rl_search_record">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:text="@string/search_hot"
+                        android:padding="12dp"/>
+
+                    <include layout="@layout/horizontalline"/>
+
+                    <cn.ahabox.widget.FlowLayout
+                        android:id="@+id/fl_search_hot"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+</LinearLayout>

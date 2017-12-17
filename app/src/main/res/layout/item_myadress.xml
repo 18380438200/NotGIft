@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/edittext_bg_shape">
+
+    <TextView
+        android:id="@+id/tv_address_name"
+        style="@style/text_basestyle"
+        android:layout_margin="10dp"
+        android:text="程元亨" />
+
+    <TextView
+        android:id="@+id/tv_address_phone"
+        style="@style/text_basestyle"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="3dp"
+        android:text="13348050311" />
+
+    <TextView
+        android:id="@+id/tv_address_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:textSize="12sp"
+        android:maxLines="3"
+        android:minLines="3"
+        android:lineSpacingExtra="2dp"
+        android:text="北京市，朝阳区望京东路锐创国际中心19层"/>
+
+    <include layout="@layout/horizontalline"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="26dp">
+
+        <TextView
+            android:id="@+id/tv_address_del"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:textColor="@color/voicelist_textcolor"
+            android:gravity="center"
+            android:textSize="12sp"
+            android:text="@string/deladdress"/>
+
+        <include layout="@layout/seperateline"/>
+
+        <TextView
+            android:id="@+id/tv_address_edit"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:textColor="@color/voicelist_textcolor"
+            android:gravity="center"
+            android:textSize="12sp"
+            android:text="@string/editaddress"/>
+    </LinearLayout>
+
+</LinearLayout>

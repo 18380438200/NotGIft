@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="cn.ahabox.activity.GiftinfoConfirmActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <include layout="@layout/mycustomactionbar"
+            android:id="@+id/infoconfirm_header"/>
+
+        <include layout="@layout/horizontalline"/>
+
+        <include layout="@layout/product_info"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/ll_infoconfirm">
+
+            <include layout="@layout/content_seperater"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:layout_marginLeft="3dp"
+                android:textColor="@color/voicelist_textcolor"
+                android:text="@string/changeshareinfo"/>
+
+            <include layout="@layout/horizontalline"/>
+
+            <android.support.v7.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/card_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                card_view:cardBackgroundColor="@android:color/white"
+                card_view:cardCornerRadius="4dp"
+                android:layout_margin="14dp"
+                card_view:cardElevation="3dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp">
+
+                    <EditText
+                        android:id="@+id/tv_confirm_sharetip"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:padding="7dp"
+                        android:textColor="@color/black"
+                        android:text="@string/sendgift_toyou"
+                        android:textSize="12sp"
+                        android:gravity="top"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/edittext_bg_shape"/>
+
+                    <ImageView
+                        android:id="@+id/iv_confirm_pic"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:layout_below="@id/tv_confirm_sharetip"
+                        android:background="@mipmap/ic_launcher"/>
+
+                    <EditText
+                        android:id="@+id/et_confirm_sharecontent"
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:layout_below="@id/tv_confirm_sharetip"
+                        android:layout_toRightOf="@id/iv_confirm_pic"
+                        android:background="@drawable/edittext_bg_shape"
+                        android:gravity="top"
+                        android:textSize="11sp"
+                        android:layout_marginLeft="10dp"
+                        android:padding="7dp"
+                        android:lineSpacingExtra="4dp"
+                        android:text="@string/giftinfoceivetip"/>
+
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+
+        <include layout="@layout/content_seperater"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:lineSpacingExtra="3dp"
+            android:gravity="center_horizontal"
+            android:text="@string/giftinfotip"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_giftinfo_next"
+        style="@style/btn_nextstyle"
+        android:text="@string/nextstep" />
+
+</RelativeLayout>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="cn.ahabox.activity.SuccessfulSendActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <include layout="@layout/mycustomactionbar"
+            android:id="@+id/sended_header" />
+
+        <include layout="@layout/horizontalline"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="15dp"
+            android:background="@mipmap/successsend"/>
+
+        <TextView
+            style="@style/text_basestyle"
+            android:text="@string/successsend"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:id="@+id/tv_successful_send"
+            style="@style/text_basestyle"
+            android:text="@string/pleasewait"
+            android:layout_marginTop="16dp"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_send_enterbox"
+        style="@style/btn_nextstyle"
+        android:text="@string/return_home_page"/>
+
+</RelativeLayout>

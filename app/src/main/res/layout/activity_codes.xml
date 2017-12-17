@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context="cn.ahabox.activity.CodesActivity">
+
+    <include layout="@layout/mycustomactionbar"
+        android:id="@+id/codes_header"/>
+
+    <include layout="@layout/horizontalline"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="47dp"
+        android:layout_marginLeft="23dp"
+        android:layout_marginRight="23dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/login_phonenum"
+                android:textColor="@color/black"
+                android:textSize="16sp"/>
+
+            <EditText
+                android:id="@+id/et_codes_phonenum"
+                style="@style/login_et_shape"
+                android:inputType="phone"
+                android:hint="请输入手机号"
+                android:layout_marginLeft="13dp"
+                android:maxLength="11"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_marginTop="13dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/login_codes"
+                android:textColor="@color/black"
+                android:textSize="16sp"/>
+
+            <EditText
+                android:id="@+id/et_codes_input"
+                android:inputType="number"
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:layout_height="43dp"
+                android:hint="请输入6位验证码"
+                android:textSize="15sp"
+                android:maxLength="6"
+                android:paddingLeft="10dp"
+                android:background="@drawable/loginbtn_mine_shape"
+                android:layout_marginLeft="13dp"
+                android:enabled="false"/>
+
+            <TextView
+                android:id="@+id/tv_codes_get"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="43dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/pressed_black_selector"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:textSize="13sp"
+                android:text="@string/login_getcodes"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/btn_codes_register"
+            style="@style/login_btn_style"/>
+
+    </LinearLayout>
+
+</LinearLayout>

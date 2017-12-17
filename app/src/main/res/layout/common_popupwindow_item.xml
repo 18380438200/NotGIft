@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tv_popupwindow_camera"
+        style="@style/popupwin_item"
+        android:text="拍照"
+        android:background="@drawable/btn_bind_cancel"/>
+
+    <TextView
+        android:id="@+id/tv_popupwindow_photo"
+        style="@style/popupwin_item"
+        android:text="从相册选取"
+        android:background="@drawable/btn_bind_cancel"/>
+
+</LinearLayout>

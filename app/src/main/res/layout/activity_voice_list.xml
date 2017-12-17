@@ -1,0 +1,42 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="cn.ahabox.activity.VoiceListActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include layout="@layout/mycustomactionbar"
+            android:id="@+id/recorder_header"/>
+
+        <include layout="@layout/horizontalline"/>
+
+        <ListView
+            android:id="@+id/listViewAudioFile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="40dp"
+            android:dividerHeight="15dp"
+            android:layout_marginTop="13dp"
+            android:padding="10dp"
+            android:scrollbars="none"
+            android:divider="@color/white">
+        </ListView>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_recorder_confire"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:textSize="18sp"
+        android:text="确 认"
+        android:background="@drawable/pressed_red_selector"
+        android:gravity="center"
+        android:textColor="@color/white"/>
+
+</RelativeLayout>

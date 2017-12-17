@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="cn.ahabox.activity.WaitacceptOrderdetailActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <include layout="@layout/mycustomactionbar"
+        android:id="@+id/orderdetail_header"/>
+
+    <include layout="@layout/horizontalline"/>
+
+    <ScrollView
+        android:id="@+id/sv_orderdetail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:padding="12dp">
+
+            <ImageView
+                android:id="@+id/iv_orderdetial_cover"
+                android:layout_width="125dp"
+                android:layout_height="125dp"
+                android:scaleType="centerCrop"/>
+
+            <TextView
+                android:id="@+id/tv_orderdetail_buytime"
+                android:layout_width="125dp"
+                android:layout_height="wrap_content"
+                android:textSize="8sp"
+                android:padding="3dp"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:text="2015年12月25日 18：13购买"
+                android:layout_alignBottom="@id/iv_orderdetial_cover"
+                android:background="@color/text_red"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_toRightOf="@id/iv_orderdetial_cover">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="订单号："/>
+
+                    <TextView
+                        android:id="@+id/tv_orderdetail_code"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="15122543305228"/>
+                </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/tv_orderdetial_name"
+                    style="@style/text_basestyle"
+                    android:layout_weight="1"
+                    android:text="红色玫瑰镂空书签"
+                    android:layout_marginTop="6dp"
+                    android:layout_gravity="right"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_gravity="right">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/siyn_money"/>
+
+                    <TextView
+                        android:id="@+id/tv_orderdetail_price"
+                        style="@style/text_basestyle"
+                        android:textSize="18sp"
+                        android:layout_marginLeft="5dp"
+                        android:text="138"/>
+                </LinearLayout>
+
+            </LinearLayout>
+        </RelativeLayout>
+
+        <include layout="@layout/content_seperater"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/blessingvoice"
+            android:padding="12dp"/>
+
+        <include layout="@layout/horizontalline"/>
+
+        <RelativeLayout
+            android:id="@+id/tv_audio_play"
+            android:layout_width="170dp"
+            android:layout_height="32dp"
+            android:paddingLeft="10dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="9dp"
+            android:layout_marginTop="9dp"
+            android:background="@drawable/edittext_redbg_shape">
+
+            <ImageView
+                android:id="@+id/iv_audio"
+                android:layout_width="10dp"
+                android:layout_height="14dp"
+                android:layout_centerVertical="true"
+                android:background="@mipmap/recordvoice"/>
+
+            <com.ant.liao.GifView
+                android:id="@+id/mygif"
+                android:layout_width="10dp"
+                android:layout_height="14dp"
+                android:layout_centerVertical="true"
+                android:enabled="false"
+                android:visibility="gone"/>
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/blessvoice_tip"
+            android:gravity="center"/>
+
+        <include layout="@layout/content_seperater"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/linkcontent"
+            android:padding="12dp"/>
+
+        <include layout="@layout/horizontalline"/>
+
+        <android.support.v7.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/card_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            card_view:cardBackgroundColor="@android:color/white"
+            card_view:cardCornerRadius="5dp"
+            android:layout_margin="15dp"
+            card_view:cardElevation="4dp">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="12dp">
+                <EditText
+                    android:id="@+id/et_orderdetail_linktitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="14dp"
+                    android:textSize="13sp"/>
+
+                <ImageView
+                    android:id="@+id/iv_detail_linkpic"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:background="@mipmap/ic_launcher"
+                    android:layout_below="@id/et_orderdetail_linktitle"/>
+
+                <EditText
+                    android:id="@+id/et_orderdetail_linkcontent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/et_orderdetail_linktitle"
+                    android:layout_toRightOf="@id/iv_detail_linkpic"
+                    android:gravity="left|top"
+                    android:layout_marginLeft="15dp"
+                    android:textSize="13sp"/>
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:padding="15dp"
+            android:textSize="14sp"
+            android:lineSpacingExtra="5dp"
+            android:text="@string/send_link_tip"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="50dp"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_orderdetail_sendagan"
+        style="@style/btn_nextstyle"
+        android:text="@string/send_agan" />
+
+</RelativeLayout>

@@ -1,0 +1,114 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="cn.ahabox.fragment.FirstPageFragment">
+
+    <include layout="@layout/mycustom_mainbar"
+        android:id="@+id/firstpage_header"/>
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/srl_firstpage"
+        android:layout_below="@id/firstpage_header"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+            <cn.ahabox.widget.TopFloatScrollView
+                android:id="@+id/scroll_firstpage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rl_firstpage_header">
+
+                <LinearLayout
+                    android:id="@+id/ll_firstpage_scroll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/rl_firstpage_banner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center_horizontal" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingBottom="35dp">
+
+                        <ImageView
+                            android:layout_width="192dp"
+                            android:layout_height="64dp"
+                            android:layout_marginTop="60dp"
+                            android:layout_gravity="center_horizontal"
+                            android:background="@mipmap/ic_menu_slogan"/>
+
+                        <cn.ahabox.widget.ListViewForScrollView
+                            android:id="@+id/lv_firstpage_catergery"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="50dp"
+                            android:divider="@null"/>
+
+                        <ImageView
+                            android:layout_width="92dp"
+                            android:layout_height="28dp"
+                            android:layout_gravity="center_horizontal"
+                            android:background="@mipmap/ic_new_recomend"/>
+                    </LinearLayout>
+
+                    <cn.ahabox.widget.GridViewForScrollView
+                        android:id="@+id/gv_firstpage_gift"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:focusable="false"
+                        android:numColumns="2"
+                        android:layout_marginBottom="-160dp"/>
+
+                    <ImageView
+                        android:layout_width="92dp"
+                        android:layout_height="28dp"
+                        android:layout_margin="35dp"
+                        android:background="@mipmap/ic_hot_recomend"
+                        android:layout_gravity="center_horizontal"/>
+
+                    <cn.ahabox.widget.ListViewForScrollView
+                        android:id="@+id/lv_firstpage_quality"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:focusable="false"
+                        android:divider="@null"/>
+
+                </LinearLayout>
+            </cn.ahabox.widget.TopFloatScrollView>
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_firstpage_stick"
+        android:layout_below="@id/rl_firstpage_header"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <include layout="@layout/stick_action"
+            android:id="@+id/fixbar"/>
+
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/ib_firstpage_up"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@mipmap/ic_up"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="80dp"
+        android:visibility="gone"/>
+
+</RelativeLayout>

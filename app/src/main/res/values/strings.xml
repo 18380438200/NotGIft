@@ -1,0 +1,254 @@
+<resources>
+    <string name="app_name">非礼物</string>
+    <string name="app_name_help">非礼物助手</string>
+
+    <string name="search">请输入关键字搜索</string>
+
+    <string name="firstpage">首页</string>
+    <string name="topic">专题</string>
+    <string name="mine">我的</string>
+    <string name="fastchoose">产品分类</string>
+    <string name="brand">品牌汇</string>
+
+    <string name="designer_on">on</string>
+    <string name="designer_off">off</string>
+
+    <string name="firstpage_gift">商 品 推 荐</string>
+    <string name="firstpage_designer">设 计 师 推 荐</string>
+    <string name="firstpage_quality">精 品 推 荐</string>
+
+    <!-- 所有页面标题 -->
+    <string name="title_aboutus">关于Ahalife</string>
+    <string name="title_add_address">添加地址</string>
+    <string name="title_edit_address">修改地址</string>
+    <string name="title_myaddress">我的地址</string>
+    <string name="title_register">用户注册</string>
+    <string name="title_modify_psd">修改密码</string>
+    <string name="title_registeror_repsd">用户注册 / 修改密码</string>
+    <string name="title_feedback">问题反馈</string>
+    <string name="title_giftbox">礼物箱</string>
+    <string name="title_giftcollection">商品收藏</string>
+    <string name="title_giftinfoconfirm">商品信息确认</string>
+    <string name="title_login">用户登录</string>
+    <string name="title_orderdetail">订单详情</string>
+    <string name="title_giftdetail">商品详情</string>
+    <string name="title_recipient_address">收礼人地址</string>
+    <string name="title_recipient_info">收礼人信息</string>
+    <string name="title_recordvoice">录制语音</string>
+    <string name="title_refund_reason">退款理由</string>
+    <string name="title_setting">设置</string>
+    <string name="title_pay_success">支付成功</string>
+    <string name="title_send_success">订单成功</string>
+    <string name="title_transaction_order">成交订单</string>
+    <string name="title_voice_change">语音改名</string>
+    <string name="title_voice_list">语音列表</string>
+    <string name="title_wait_accept">等待接收</string>
+    <string name="title_wxpay">微信支付</string>
+    <string name="title_designer">品牌汇</string>
+    <string name="title_mine">我的</string>
+    <string name="title_topic">专题</string>
+    <string name="title_myfocus">我的关注</string>
+
+    <!-- 微信相关 -->
+    <string name="isrecordering">正在录音中...</string>
+    <string name="audio_changename">修改语音名称</string>
+    <string name="audio_del">从列表移除</string>
+    <string name="loading">正在加载...</string>
+    <string name="load_more">上拉加载更多</string>
+    <string name="weixin_login">微 信 登 录</string>
+    <string name="payment_cancel">支付取消</string>
+    <string name="payment_failed">支付失败</string>
+
+    <!-- 礼物详情 -->
+    <string name="productdetail_kefu">客服</string>
+    <string name="productdetail_coll">收藏</string>
+    <string name="productdetail_coll_already">已收藏</string>
+    <string name="productdetail_sendself">直接下单</string>
+    <string name="productdetail_sendta">微信送礼</string>
+    <string name="donations">爱 心 捐 赠</string>
+    <string name="productdetail_contactbutler">联系商品管家</string>
+    <string name="productdetail_buy_finish">抢 购 结 束</string>
+    <string name="sold_out">售 罄</string>
+    <string name="will_sold">即 将 发 售</string>
+    <string name="panic_buying">抢 购 中</string>
+    <string name="keep_drag">继续拖动，查看更多信息</string>
+
+    <!-- 购物车 -->
+    <string name="shopcart">购物车</string>
+    <string name="billing">结算</string>
+    <string name="choose_all">全选</string>
+    <string name="total">合计:</string>
+    <string name="shopcart_nodatas">您的购物车空空如也啦~</string>
+    <string name="addto_shopcart">加入购物车</string>
+    <string name="buy_num">购买数量:</string>
+    <string name="beyound_num">超过库存数量</string>
+    <string name="buy_rightnow">立即购买</string>
+    <string name="choose_address">选择收货地址</string>
+    <string name="shopcart_no_checked">您还没有选择宝贝哟</string>
+
+    <!-- 设计师详情 -->
+    <string name="comment">评论</string>
+    <string name="saysomething">我也说几句...(120字以内)</string>
+    <string name="reply">回复</string>
+    <string name="replyed">回复了</string>
+    <string name="hide">收起</string>
+    <string name="comment_success">评论成功</string>
+    <string name="more_comments">查看更多评论</string>
+
+    <!-- AlertDialog -->
+    <string name="dialog_ok">确 认</string>
+    <string name="dialog_cancel">取消</string>
+
+    <string name="more">更多 ></string>
+    <string name="see_more">查看更多</string>
+    <string name="know_more">了解更多</string>
+    <string name="siyn_money">¥</string>
+    <string name="search_record">搜索记录</string>
+    <string name="clear_record">清除记录</string>
+    <string name="search_hot">大家都在搜</string>
+    <string name="change_group">换一组</string>
+
+    <!-- 支付页面字符串 -->
+    <string name="number">数量：</string>
+    <string name="phonenum">您 的 电 话 ：</string>
+    <string name="tipinfo">备 注 信 息 ：</string>
+    <string name="tipexplain">如果您还有特别需要交代的话，请在此处给我们留言，可不填，字数不超过50字</string>
+    <string name="promocode">优 惠 码 ：</string>
+    <string name="inputpromocede">请输入您的优惠码</string>
+    <string name="verification">验 证</string>
+    <string name="check_success">验证成功</string>
+    <string name="shifu">实付</string>
+    <string name="wenxintip">温馨提示：</string>
+    <string name="wenxinexplain">付款后，等待收礼人填写地址或填写已知地址。（如礼物未送出，7日后会自动退款）</string>
+    <string name="ship">发货说明：</string>
+    <string name="shipexplain">卖家承诺订单在买家付款后，12小时内发货</string>
+    <string name="pay">支付</string>
+    <string name="payment">支付</string>
+    <string name="payfinished">支 付 完 成</string>
+    <string name="wenxintip2">温 馨 提 示</string>
+    <string name="payfinishedtip">为了让你的商品尽快送到Ta的手中，请按照步骤详细操作，以免错过给Ta的惊喜。</string>
+    <string name="nextstep">下 一 步</string>
+    <string name="add_address">添加地址 ></string>
+    <string name="collection_tip">去为更多惊喜和祝福精心挑选吧~</string>
+    <string name="goto_follow">快去关注你喜欢的设计师吧~</string>
+    <string name="shiptime_tip">发货时间提示</string>
+
+    <!-- 录制语音 -->
+    <string name="recordtip">录制语音提示</string>
+    <string name="recordtip_content">您的录音我们会生成二维码随商品递给收礼人，当收礼人打开商品并扫描二维码即可收听到您的语音祝福。（您的二维码只有收货人的微信扫码有效）</string>
+    <string name="choosevoice">选 择 语 音</string>
+    <string name="clickvoice">点 击 录 音</string>
+    <string name="recording">正在录制 ...</string>
+    <string name="stoprecord">停止录音</string>
+    <string name="testlisen">试听语音</string>
+    <string name="recordfinish">确认完成</string>
+    <string name="rerecord">重新录音</string>
+    <string name="voice_changename_tip">语音名称（30字以内）</string>
+
+    <!-- 收礼人地址 -->
+    <string name="deladdress">删除</string>
+    <string name="editaddress">编辑</string>
+    <string name="changeshareinfo">修改链接标题及内容</string>
+    <string name="giftinfotip">编辑此框文字最终将以此形式直接发送至对方微信聊天对话框中，对方点击后便可填写地址操作</string>
+    <string name="sendgift_toyou">为您精心挑选了一份商品，点击领取</string>
+    <string name="giftinfoceivetip">赶快接收我送的商品，填完地址就等着收快递吧！</string>
+    <string name="entermybox">进 入 我 的 礼 物 箱</string>
+    <string name="successsend">发 送 成 功</string>
+    <string name="pleasewait">请耐心等待对方接收</string>
+    <string name="quick_ship_tip">我们会尽快安排发货</string>
+    <string name="return_home_page">返回主页</string>
+
+    <string name="other_write_address">对方填地址</string>
+    <string name="other_write_tip">您的地址请求会发送到对方微信的对话框中，对方按照操作流程便可轻松填写地址。</string>
+    <string name="myself_write_address">自填地址</string>
+    <string name="myself_write_tip">您可以直接填写对方地址，会让对方未知的情况下，更惊喜地收到您的礼物。</string>
+    <string name="box_no_gift">该为更多惊喜和祝福备仓啦~</string>
+
+    <string name="determine">确 定</string>
+    <string name="phone_address">收 货 人 电 话 / 地 址</string>
+    <string name="delivery_time">配 送 时 间</string>
+    <string name="workday_weekend">工作日及周末</string>
+    <string name="only_workday">仅工作日</string>
+    <string name="only_weekend">仅周末</string>
+
+    <string name="recipient_name">姓\t\t\t\t\t名：</string>
+    <string name="recipient_phone">联系方式：</string>
+    <string name="recipient_zipcode">邮\t\t\t\t\t编：</string>
+    <string name="recipient_recieveaddress">收货地址：</string>
+    <string name="orderlist_del">删除订单</string>
+    <string name="detail">查看详情</string>
+    <string name="orderlist_recommend">请 见 如 下 商 品 推 荐</string>
+    <string name="giftbox">礼物箱</string>
+    <string name="setting">设置</string>
+    <string name="ordertransaction">成交订单</string>
+    <string name="myaddress_manage">收货地址管理</string>
+    <string name="myfocus">我的关注</string>
+    <string name="myvoice_manage">语音管理</string>
+    <string name="collection">收藏商品</string>
+    <string name="feedback">意见反馈</string>
+
+    <!-- 订单详情 -->
+    <string name="reciepentinfo">信息确认</string>
+    <string name="blessingvoice">祝福语音</string>
+    <string name="linkcontent">修改链接标题及内容</string>
+    <string name="orderstate">订单状态</string>
+    <string name="logisticsstatus">物流状态</string>
+    <string name="refundservice">退款服务</string>
+    <string name="request_refund">申请退款</string>
+    <string name="blessvoice_tip">收礼人收到礼物后，扫描礼盒内卡片上的二维码即可收听您的语音</string>
+    <string name="refund_tip">申请退款后，我们会尽快处理，有任何问题请在微信中留言，微信客服会及时处理您的反馈</string>
+    <string name="send_agan">再 次 发 送</string>
+    <string name="send_link_tip">编辑此框文字，最终将以此形式直接发送至对方微信聊天对话框中，对方点击后便可填写地址操作</string>
+    <string name="refundreason_tip">为了我们更好地为您服务，请如实地反馈您的建议。（此反馈为退款前必填项目）</string>
+    <string name="cant_refund">该商品不能申请退款</string>
+    <string name="cant_refund_tip">已过申请退款时间，有任何问题请在微信中留言，微信客服会及时处理您的反馈</string>
+
+    <!-- 填写收礼人地址 -->
+    <string name="reciepent_name">收 货 人</string>
+    <string name="reciepent_phone">手 机 号</string>
+    <string name="reciepent_province">省 份</string>
+    <string name="reciepent_mayer">市</string>
+    <string name="reciepent_county">区 / 县</string>
+    <string name="reciepent_zipcode">邮 编</string>
+    <string name="reciepent_address">详细地址</string>
+
+    <!-- tab标题 -->
+    <string name="tab_pictext">图文详情</string>
+    <string name="tab_giftdescript">商品描述</string>
+    <string name="tab_giftcomment">商品评论</string>
+    <string name="tab_specialservice">特有服务</string>
+    <string name="tab_notsend">未送出的商品</string>
+    <string name="tab_notreceived">Ta未接收的商品</string>
+    <string name="sendta">送 给 Ta</string>
+    <string name="productshow">作 品 展 示</string>
+    <string name="opinianhint">把您遇到的问题，或者想要的功能告诉我吧（200字以内）。</string>
+    <string name="opiniancontact">请留下您的微信号或者联系电话（必填）</string>
+    <string name="confirmsubmit">确 认 提 交</string>
+
+    <!-- 登录注册 -->
+    <string name="login_phonenum">手机号</string>
+    <string name="login_codes">验证码</string>
+    <string name="login_getcodes">获取验证码</string>
+    <string name="login_registernow">立 即 注 册</string>
+    <string name="password">密码</string>
+    <string name="confirm_psd">确认\n密码</string>
+    <string name="complite_register">完 成 注 册</string>
+    <string name="enterpsd_modify_psd">修 改 密 码</string>
+    <string name="login_loginnow">立 即 登 录</string>
+    <string name="forget_psd">忘 记 密 码</string>
+
+    <!-- 设置 -->
+    <string name="setting_push_message">消息推送</string>
+    <string name="setting_check_update">检查更新</string>
+    <string name="setting_clear_cache">清除缓存</string>
+    <string name="setting_about_us">关于啊哈Ahalife</string>
+    <string name="aboutus_slogon">Ahalife: 啊哈 生活就是没想到</string>
+    <string name="setting_modify_psd">修改密码</string>
+    <string name="setting_sign_out">退 出 登 录</string>
+    <string name="otherway_login">其 它 登 录 方 式</string>
+    <string name="company">非礼物互动科技（上海）有限公司北京分公司</string>
+
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>

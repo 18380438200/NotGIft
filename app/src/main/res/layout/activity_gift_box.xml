@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context="cn.ahabox.activity.GiftBoxActivity">
+
+    <include layout="@layout/mycustomactionbar"
+        android:id="@+id/giftbox_header"/>
+
+    <include layout="@layout/horizontalline"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioGroup
+            android:id="@+id/rg_giftbox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rb_notsend"
+                style="@style/product_detail_radiobtn"
+                android:text="@string/tab_notsend"
+                android:checked="false" />
+
+            <RadioButton
+                android:id="@+id/rb_notrecieve"
+                style="@style/product_detail_radiobtn"
+                android:text="@string/tab_notreceived" />
+
+        </RadioGroup>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="0dp"/>
+
+            <include layout="@layout/seperateline" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="0dp"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_detail_bottomline"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <View
+            style="@style/detail_bottomline"/>
+        <View
+            style="@style/detail_bottomline"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/text_red"/>
+
+    <FrameLayout
+        android:id="@+id/fl_giftbox"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+</LinearLayout>

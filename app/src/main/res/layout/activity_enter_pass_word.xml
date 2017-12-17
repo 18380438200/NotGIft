@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context="cn.ahabox.activity.EnterPassWordActivity">
+
+    <include layout="@layout/mycustomactionbar"
+        android:id="@+id/psd_header"/>
+
+    <include layout="@layout/horizontalline"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="47dp"
+        android:layout_marginLeft="23dp"
+        android:layout_marginRight="23dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="32dp"
+                android:layout_height="wrap_content"
+                android:text="@string/password"
+                android:textColor="@color/black"
+                android:textSize="16sp"/>
+
+            <EditText
+                android:id="@+id/et_psd_enter"
+                style="@style/login_et_shape"
+                android:hint="请输入密码"
+                android:inputType="textPassword"
+                android:layout_marginLeft="20dp"
+                android:maxLength="18"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_marginTop="13dp">
+
+            <TextView
+                android:layout_width="32dp"
+                android:layout_height="wrap_content"
+                android:text="@string/confirm_psd"
+                android:textColor="@color/black"
+                android:textSize="16sp"/>
+
+            <EditText
+                android:id="@+id/et_psd_confirm"
+                style="@style/login_et_shape"
+                android:hint="请再输入密码"
+                android:inputType="textPassword"
+                android:layout_marginLeft="20dp"
+                android:maxLength="18"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/btn_psd_complite"
+            style="@style/login_btn_style"
+            android:text="@string/complite_register"/>
+
+    </LinearLayout>
+
+</LinearLayout>

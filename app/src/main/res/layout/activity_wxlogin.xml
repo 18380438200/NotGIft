@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context="cn.ahabox.activity.WXLoginActivity">
+
+    <include layout="@layout/mycustomactionbar"
+        android:id="@+id/wxlogin_header"/>
+
+    <include layout="@layout/horizontalline"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="23dp"
+        android:gravity="center_horizontal">
+
+        <ImageView
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:background="@mipmap/ic_weixin"
+            android:layout_marginTop="37dp"/>
+
+        <TextView
+            android:id="@+id/tv_wx_login"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="60dp"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:background="@color/weixin_green"
+            android:text="@string/weixin_login"/>
+
+        <TextView
+            android:id="@+id/tv_otherway_login"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="15dp"
+            android:textColor="@color/mine_loginbtn_line"
+            android:background="@drawable/loginbtn_mine_shape"
+            android:gravity="center"
+            android:text="@string/otherway_login"/>
+    </LinearLayout>
+
+</LinearLayout>

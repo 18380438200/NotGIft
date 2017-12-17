@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <cn.ahabox.widget.PullToRefreshView
+        android:id="@+id/main_pull_refresh_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="4dp"
+        android:layout_weight="1" >
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical" >
+
+                <cn.ahabox.widget.GridViewForScrollView
+                    android:id="@+id/gv_fastchoose_sub"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:numColumns="4"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"/>
+
+                <cn.ahabox.widget.GridViewForScrollView
+                    android:id="@+id/gv_fastchoose"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:numColumns="2"
+                    android:listSelector="@android:color/transparent"
+                    android:layout_margin="5dp"/>
+            </LinearLayout>
+        </ScrollView>
+    </cn.ahabox.widget.PullToRefreshView>
+
+</LinearLayout>

@@ -1,0 +1,2 @@
+app/src/main/java/cn/ahabox/feiliwu/wxapi/WXEntryActivity.java
+app/src/main/java/cn/ahabox/feiliwu/wxapi/WXPayEntryActivity.java

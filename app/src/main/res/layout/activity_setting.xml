@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context="cn.ahabox.activity.SettingActivity">
+
+    <include layout="@layout/mycustomactionbar"
+        android:id="@+id/setting_header"/>
+
+    <include layout="@layout/horizontalline"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/pressed_white_selector"
+            android:paddingLeft="24dp"
+            android:paddingRight="18dp">
+
+            <TextView
+                style="@style/mine_text_style"
+                android:text="@string/setting_push_message"/>
+
+            <cn.ahabox.widget.CheckSwitchButton
+                android:id="@+id/mCheckSwithcButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:enabled="true" />
+
+            <View
+                style="@style/mine_bottomline_style"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_setting_update"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/pressed_white_selector"
+            android:paddingLeft="24dp"
+            android:paddingRight="18dp">
+
+            <TextView
+                style="@style/mine_text_style"
+                android:text="@string/setting_check_update"/>
+
+            <TextView
+                android:id="@+id/tv_setting_vername"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:textColor="@color/black"/>
+
+            <View
+                style="@style/mine_bottomline_style"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_setting_clearcache"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/pressed_white_selector"
+            android:paddingLeft="24dp"
+            android:paddingRight="18dp">
+
+            <TextView
+                style="@style/mine_text_style"
+                android:text="@string/setting_clear_cache"/>
+
+            <TextView
+                android:id="@+id/tv_setting_cachesize"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:textColor="@color/black"/>
+
+            <View
+                style="@style/mine_bottomline_style"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_setting_modifypsd"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/pressed_white_selector"
+            android:paddingLeft="24dp"
+            android:paddingRight="18dp">
+
+            <TextView
+                style="@style/mine_text_style"
+                android:text="@string/setting_modify_psd"/>
+
+            <ImageView
+                style="@style/mine_next"/>
+
+            <View
+                style="@style/mine_bottomline_style"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_setting_feedback"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/pressed_white_selector"
+            android:paddingLeft="24dp"
+            android:paddingRight="18dp">
+
+            <TextView
+                style="@style/mine_text_style"
+                android:text="@string/feedback"/>
+
+            <ImageView
+                style="@style/mine_next"/>
+
+            <View
+                style="@style/mine_bottomline_style"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_setting_aboutus"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/pressed_white_selector"
+            android:paddingLeft="24dp"
+            android:paddingRight="18dp">
+
+            <TextView
+                style="@style/mine_text_style"
+                android:text="@string/setting_about_us"/>
+
+            <ImageView
+                style="@style/mine_next"/>
+
+            <View
+                style="@style/mine_bottomline_style"/>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_setting_signout"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="18dp"
+            android:background="@drawable/pressed_black_selector"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:text="@string/setting_sign_out"/>
+
+    </LinearLayout>
+
+</LinearLayout>

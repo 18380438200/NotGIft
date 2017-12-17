@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_firstpage_header"
+    android:layout_width="match_parent"
+    android:layout_height="45dp"
+    android:background="@color/black">
+
+    <ImageButton
+        android:id="@+id/ib_mainbar_home"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginLeft="20dp"
+        android:layout_centerVertical="true"
+        android:background="@mipmap/ic_home"/>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_centerInParent="true">
+
+        <ImageView
+            android:layout_width="18dp"
+            android:layout_height="25dp"
+            android:background="@mipmap/logo_img"
+            android:layout_centerVertical="true"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:layout_alignParentRight="true">
+        <ImageButton
+            android:id="@+id/ib_mainbar_search"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:background="@mipmap/ic_home_search"
+            android:layout_marginRight="20dp"/>
+
+        <RelativeLayout
+            android:id="@+id/rl_shopcart"
+            android:layout_width="60dp"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:id="@+id/ib_shopcart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@mipmap/ic_shopcart" />
+
+            <View
+                android:id="@+id/view_shopcart_notice"
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:background="@drawable/shopcart_notice"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="18dp"
+                android:layout_marginTop="12dp"
+                android:visibility="gone"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New RadioButton"
+        android:id="@+id/radioButton"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="283dp"
+        android:layout_marginStart="283dp"
+        android:layout_marginTop="244dp" />
+
+</RelativeLayout>
