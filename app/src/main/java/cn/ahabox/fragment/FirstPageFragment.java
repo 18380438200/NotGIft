@@ -313,7 +313,6 @@ public class FirstPageFragment extends Fragment implements TopFloatScrollView.On
                     dialog.show();
                     dialogSetting(dialog, toastObj, toastTime);
                 }
-
             }
         } catch (JSONException e) {
             e.printStackTrace();
