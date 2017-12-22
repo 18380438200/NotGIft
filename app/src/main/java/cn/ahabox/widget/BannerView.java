@@ -78,6 +78,7 @@ public class BannerView {
 
             @Override
             public void onPageScrollStateChanged(int i) {
+                
             }
         });
 
