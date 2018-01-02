@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.LinearLayout;
 import java.util.List;
 import cn.ahabox.feiliwu_help.R;
+import cn.ahabox.utils.CollectionUtils;
 
 /**
  * Created by libo on 2015/12/7.
@@ -78,7 +79,7 @@ public class BannerView {
 
             @Override
             public void onPageScrollStateChanged(int i) {
-                
+
             }
         });
 

@@ -22,12 +22,13 @@ import cn.ahabox.config.Config;
 import cn.ahabox.feiliwu_help.R;
 import cn.ahabox.interfaces.Api;
 import cn.ahabox.interfaces.CallBackimpl;
+import cn.ahabox.model.CityEntity;
 import cn.ahabox.model.CommentEntity;
 import cn.ahabox.network.DataParserImpl;
 
 /**
  * Created by libo on 2016/7/1.
- *
+ * <p>
  * 评论功能数据请求
  */
 public class CommentsUtils {
@@ -39,24 +40,25 @@ public class CommentsUtils {
     private static DialogUtils dialogUtils;
     private ArrayList commentsDatas;
 
-    public CommentsUtils(Context context,int id,EditText editText,ArrayList commentsDatas,ListView listView){
+    public CommentsUtils(Context context, int id, EditText editText, ArrayList commentsDatas, ListView listView) {
         this.context = context;
         this.id = id;
         this.editText = editText;
         this.commentsDatas = commentsDatas;
         dataParser = new DataParserImpl();
         dialogUtils = new DialogUtils(context);
-        adapter = new CommentsAdapter(context,commentsDatas,dialogUtils,dataParser);
+        adapter = new CommentsAdapter(context, commentsDatas, dialogUtils, dataParser);
         listView.setAdapter(adapter.getAdapter());
     }
 
     /**
      * 获取评论列表
+     *
      * @param kind
      * @param id
      * @param page
      */
-    public void getCommentsList(String kind,int id, final int page, final View tvMore){
+    public void getCommentsList(String kind, int id, final int page, final View tvMore) {
         dataParser.setCallBack(context, new CallBackimpl() {
             @Override
             public void callBack(String response) {
@@ -80,7 +82,7 @@ public class CommentsUtils {
     /**
      * 提交评论
      */
-    public void getResults(String kind,final String content) {
+    public void getResults(String kind, final String content) {
         HashMap params = new HashMap();
         params.put("field", kind);
         params.put("value", id);
@@ -99,19 +101,20 @@ public class CommentsUtils {
 
     /**
      * 评论结果处理
+     *
      * @param str
      */
-    public void makeCommentResult(String str,String content){
+    public void makeCommentResult(String str, String content) {
         try {
             JSONObject obj = new JSONObject(str);
             int status = obj.getInt("status");
             if (status == Config.STATUS_SUCCESSED) {
-                Toast.makeText(context, context.getResources().getString(R.string.comment_success),Toast.LENGTH_SHORT).show();
+                Toast.makeText(context, context.getResources().getString(R.string.comment_success), Toast.LENGTH_SHORT).show();
                 editText.setText("");    //评论成功清空编辑框并添加到第一项
                 int createCommentId = obj.getJSONObject("data").getInt("comment_id");
-                addComment(createCommentId,content);
+                addComment(createCommentId, content);
             } else {
-                Toast.makeText(context, obj.getString("errmsg"),Toast.LENGTH_SHORT).show();
+                Toast.makeText(context, obj.getString("errmsg"), Toast.LENGTH_SHORT).show();
             }
         } catch (JSONException e) {
             e.printStackTrace();
@@ -120,10 +123,11 @@ public class CommentsUtils {
 
     /**
      * 添加刚评论的项并刷新数据源
+     *
      * @param commentId
      * @param content
      */
-    private void addComment(int commentId,String content){
+    private void addComment(int commentId, String content) {
         CommentEntity entity = new CommentEntity();
         entity.setId(commentId);
         entity.setAvatar_url(App.getUser().getAvatar_url());

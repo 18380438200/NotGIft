@@ -24,7 +24,7 @@ import cn.ahabox.widget.CustomActionBar;
 
 /**
  * Created by libo on 2015/6/14.
- *
+ * <p>
  * 我的关注
  */
 public class MyFocusActivity extends BaseActivity {
@@ -32,7 +32,7 @@ public class MyFocusActivity extends BaseActivity {
     PullToRefreshGridView ptrMyfocus;
     @Bind(R.id.tv_focus_tip)
     TextView tvFocusTip;
-    private CustomActionBar customActionBar;
+    private CustomActionBar cus;
     private MyFocusAdapter myFocusAdapter;
     private ArrayList<DesignerFocusEntity> datas = new ArrayList();
 
@@ -45,12 +45,13 @@ public class MyFocusActivity extends BaseActivity {
         init();
         initData();
         event();
+
     }
 
     private void init() {
-        customActionBar = (CustomActionBar) findViewById(R.id.myfocus_header);
-        customActionBar.initStyle(CustomActionBar.HeaderStyle.DEFAULT_TITLE);
-        customActionBar.setTitle(getResources().getString(R.string.title_myfocus));
+        cus = (CustomActionBar) findViewById(R.id.myfocus_header);
+        cus.initStyle(CustomActionBar.HeaderStyle.DEFAULT_TITLE);
+        cus.setTitle(getResources().getString(R.string.title_myfocus));
 
         myFocusAdapter = new MyFocusAdapter(getApplicationContext(), datas);
         ptrMyfocus.setAdapter(myFocusAdapter.getAdapter());
@@ -64,15 +65,18 @@ public class MyFocusActivity extends BaseActivity {
 
     private void initData() {
         dialogUtils.progressDialog();
+
         dataParser.setCallBack(getApplicationContext(), new CallBackimpl() {
             @Override
             public void callBack(List datas) {
                 if (null != dialogUtils.getProgressDialog()) {
                     dialogUtils.getProgressDialog().dismiss();
                 }
+
                 ptrMyfocus.onRefreshComplete();
                 myFocusAdapter.clearData();
                 if (datas.size() == 0) {
+
                     tvFocusTip.setVisibility(View.VISIBLE);
                 } else {
                     myFocusAdapter.addAll(datas);
@@ -82,15 +86,22 @@ public class MyFocusActivity extends BaseActivity {
         dataParser.parseDesignerFocus();
     }
 
-    private void event(){
+    private void event() {
         ptrMyfocus.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent intent = new Intent(getApplicationContext(), DesignerDetailActivity.class);
                 intent.putExtra(Config.DESIGNER_ID_KEY, datas.get(position).getId());
-                startActivity(intent);
+
+
+                try {
+                    startActivity(intent);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
             }
         });
     }
+
 
 }

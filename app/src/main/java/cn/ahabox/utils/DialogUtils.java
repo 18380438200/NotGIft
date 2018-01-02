@@ -2,6 +2,7 @@ package cn.ahabox.utils;
 
 import android.content.Context;
 import android.os.CountDownTimer;
+import android.view.View;
 
 import cn.ahabox.feiliwu_help.R;
 import cn.ahabox.interfaces.CallBackimpl;
@@ -132,6 +133,7 @@ public class DialogUtils implements IDialog {
                     }
                 })
                 .show();
+
     }
 
     /**
@@ -179,6 +181,9 @@ public class DialogUtils implements IDialog {
                     }
                 })
                 .show();
+
+
+
     }
 
     /**
